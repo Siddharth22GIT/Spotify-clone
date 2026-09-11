@@ -1,179 +1,693 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spotify</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+        <title>Spotify 🎵</title>
 
-<body>
-    <header>
-        <div class="nav">
-            <img src="logo.svg" alt="">
-        </div>
-        <div class="search">
-            <input type="text" name="" id="" placeholder="Search for your favourite songs">
-        </div>
-        <div class="btns">
-            <div class="signupbtn">
-                <a href=""><button>Sign up</button></a>
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- =========================
+            HEADER
+        ========================== -->
+
+        <header>
+
+            <div class="nav">
+                <img src="logo.svg" alt="Spotify">
             </div>
-            <div class="loginbtn">
-                <a href=""><button>Log in</button></a>
+
+
+            <div class="search">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for your favourite songs"
+                    autocomplete="off"
+                >
             </div>
-        </div>
-    </header>
-    <div class="container">
-        <div class="left">
-            Your Library
-            <div class="list">
-                <div class="song"><audio
-                        src="songs/cinematic-suspense-track-f or-games-amp-trailers-225120.mp3"></audio>Song 1
-                </div>
-                <div class="song"><audio src="songs/braam-ambient-dropper-epic-stock-media-1-00-09.mp3"></audio>Song 2
-                </div>
-                <div class="song"><audio src="songs/cinematic-suspense-investigative-mystery-219178.mp3"></audio>Song 3
-                </div>
-                <div class="song"><audio
-                        src="songs/cinematic-transition-futuristic-synth-riser-ra-music-1-00-21.mp"></audio>Song 4
-                </div>
-                <div class="song"><audio src="songs/mixkit-big-cinematic-impact-788.mp3"></audio>Song 5
-                </div>
-                <div class="song"><audio src="songs/mixkit-cinematic-drama-riser-632.wav"></audio>Song 6
-                </div>
-                <div class="song"><audio src="songs/mixkit-cinematic-mysterious-riser-brass-2283.wav"></audio>Song 7
-                </div>
-                <div class="song"><audio src="songs/mixkit-echoes-188.mp3"></audio>Song 8
-                </div>
-                <div class="song"><audio src="songs/mixkit-fright-night-871.mp3"></audio>Song 9
-                </div>
-                <div class="song"><audio src="songs/mixkit-movie-trailer-epic-impact-2908.wav"></audio>Song 10
-                </div>
-                <div class="song"><audio src="songs/mixkit-powerful-air-whooshes-3220.wav"></audio>Song 11
-                </div>
-                <div class="song"><audio src="songs/mixkit-heartbeat-medium-speed-495.wav"></audio>Song 12
-                </div>
-            </div>
-            <div class="footer" data-testid="left-sidebar-legal-links">
-                <div class="sc-bmzYkS iLJbxB">
-                    <div class="sc-jsJBEP iCKNKM"><a href="https://www.spotify.com/in-en/legal/"
-                            class="e-91000-text-link e-91000-baseline e-91000-overflow-wrap-anywhere encore-internal-color-text-subdued e-91000-text-link--standalone sc-bXCLTC ekjVst"
-                            data-encore-id="textLink" id=""><span data-encore-id="type"
-                                class="Type__TypeElement-sc-goli3j-0 gBYjgG">Legal</span></a></div>
-                    <div class="sc-jsJBEP iCKNKM"><a href="https://www.spotify.com/in-en/safetyandprivacy/"
-                            class="e-91000-text-link e-91000-baseline e-91000-overflow-wrap-anywhere encore-internal-color-text-subdued e-91000-text-link--standalone sc-bXCLTC ekjVst"
-                            data-encore-id="textLink" id=""><span data-encore-id="type"
-                                class="Type__TypeElement-sc-goli3j-0 gBYjgG">Safety &amp; Privacy Center</span></a>
+
+
+            <!-- =========================
+                MY PLAYLISTS
+            ========================== -->
+
+            <div class="playlist-menu">
+
+                <button
+                    class="playlist-btn"
+                    type="button"
+                >
+                    My Playlists
+                </button>
+
+
+                <div class="playlist-dropdown">
+
+                    <!-- PLAYLIST LIST -->
+
+                    <div class="playlist-view">
+
+                        <div class="playlist-heading">
+                            My Playlists
+                        </div>
+
+                        <div class="playlist-list">
+                            <!-- Generated by JavaScript -->
+                        </div>
+
+                        <button
+                            class="all-songs-btn"
+                            type="button"
+                        >
+                            <span class="all-songs-icon">♫</span>
+                            <span>All Songs</span>
+                        </button>
+
+                        <button
+                            class="new-playlist-btn"
+                            type="button"
+                        >
+                            <span class="plus-icon">+</span>
+                            <span>New Playlist</span>
+                        </button>
+
                     </div>
-                    <div class="sc-jsJBEP iCKNKM"><a href="https://www.spotify.com/in-en/legal/privacy-policy/"
-                            class="e-91000-text-link e-91000-baseline e-91000-overflow-wrap-anywhere encore-internal-color-text-subdued e-91000-text-link--standalone sc-bXCLTC ekjVst"
-                            data-encore-id="textLink" id=""><span data-encore-id="type"
-                                class="Type__TypeElement-sc-goli3j-0 gBYjgG">Privacy Policy</span></a></div>
-                    <div class="sc-jsJBEP iCKNKM"><a href="https://www.spotify.com/in-en/legal/cookies-policy/"
-                            class="e-91000-text-link e-91000-baseline e-91000-overflow-wrap-anywhere encore-internal-color-text-subdued e-91000-text-link--standalone sc-bXCLTC ekjVst"
-                            data-encore-id="textLink" id=""><span data-encore-id="type"
-                                class="Type__TypeElement-sc-goli3j-0 gBYjgG">Cookies</span></a></div>
-                    <div class="sc-jsJBEP iCKNKM"><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
-                            class="e-91000-text-link e-91000-baseline e-91000-overflow-wrap-anywhere encore-internal-color-text-subdued e-91000-text-link--standalone sc-bXCLTC ekjVst"
-                            data-encore-id="textLink" id=""><span data-encore-id="type"
-                                class="Type__TypeElement-sc-goli3j-0 gBYjgG">About Ads</span></a></div>
-                    <div class="sc-jsJBEP iCKNKM"><a href="https://www.spotify.com/in-en/accessibility/"
-                            class="e-91000-text-link e-91000-baseline e-91000-overflow-wrap-anywhere encore-internal-color-text-subdued e-91000-text-link--standalone sc-bXCLTC ekjVst"
-                            data-encore-id="textLink" id=""><span data-encore-id="type"
-                                class="Type__TypeElement-sc-goli3j-0 gBYjgG">Accessibility</span></a></div>
-                </div><a draggable="false" href="https://www.spotify.com/legal/cookies-policy/" target="_blank"
-                    rel="noopener" class="WycFx_Gl2tUXbUJpZiD8"><span class="e-91000-text encore-text-marginal"
-                        data-encore-id="text">Cookies</span></a>
-            </div>
-        </div>
-        <div class="right">
-            Trending songs
-            <div class="holder">
-                <div class="card">
-                    <img src="song posters/1.jpg" alt="">
-                    <div class="play"><audio
-                            src="songs/cinematic-suspense-track-for-games-amp-trailers-225120.mp3"></audio><img
-                            src="play.svg" alt=""></div>
-                    song 1
-                </div>
-                <div class="card">
-                    <img src="song posters/2.jpg" alt="">
-                    <div class="play"><audio src="songs/braam-ambient-dropper-epic-stock-media-1-00-09.mp3"></audio><img
-                            src="play.svg" alt=""></div>
-                    song 2
-                </div>
-                <div class="card">
-                    <img src="song posters/3.jpg" alt="">
-                    <div class="play"><audio
-                            src="songs/cinematic-suspense-investigative-mystery-219178.mp3"></audio><img src="play.svg"
-                            alt=""></div>
-                    song 3
-                </div>
-                <div class="card">
-                    <img src="song posters/4.jpg" alt="">
-                    <div class="play"><audio
-                            src="songs/cinematic-transition-futuristic-synth-riser-ra-music-1-00-21.mp3"></audio><img
-                            src="play.svg" alt=""></div>
-                    song 4
-                </div>
-                <div class="card">
-                    <img src="song posters/5.jpg" alt="">
-                    <div class="play"><audio src="songs/mixkit-big-cinematic-impact-788.mp3"></audio><img src="play.svg"
-                            alt=""></div>
-                    song 5
-                </div>
-                <div class="card">
-                    <img src="song posters/6.jpg" alt="">
-                    <div class="play"><audio src="songs/mixkit-cinematic-drama-riser-632.wav"></audio><img
-                            src="play.svg" alt=""></div>
-                    song 6
-                </div>
-                <div class="card">
-                    <img src="song posters/7.jpg" alt="">
-                    <div class="play"><audio src="songs/mixkit-cinematic-mysterious-riser-brass-2283.wav"></audio><img
-                            src="play.svg" alt=""></div>
-                    song 7
-                </div>
-                <div class="card">
-                    <img src="song posters/8.jpg" alt="">
-                    <div class="play"><audio src="songs/mixkit-echoes-188.mp3"></audio><img src="play.svg" alt=""></div>
-                    song 8
-                </div>
-                <div class="card">
-                    <img src="song posters/9.jpg" alt="">
-                    <div class="play"><audio src="songs/mixkit-fright-night-871.mp3"></audio><img src="play.svg" alt="">
-                    </div>
-                    song 9
-                </div>
-                <div class="card">
-                    <img src="song posters/10.jpg" alt="">
-                    <div class="play"><audio src="songs/mixkit-movie-trailer-epic-impact-2908.wav"></audio><img
-                            src="play.svg" alt=""></div>
-                    song 10
-                </div>
-                <div class="card">
-                    <img src="song posters/11.jpg" alt="">
-                    <div class="play"><audio src="songs/mixkit-powerful-air-whooshes-3220.wav"></audio><img
-                            src="play.svg" alt=""></div>
-                    song 11
-                </div>
-                <div class="card" id="s12">
-                    <img src="song posters/12.jpg" alt="">
-                    <div class="play"><audio src="songs/mixkit-heartbeat-medium-speed-495.wav"></audio><img
-                            src="play.svg" alt=""></div>
-                    song 12
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-<script src="script.js"></script>
 
-</html>
+
+                    <!-- =========================
+                        PLAYLIST EDITOR
+                    ========================== -->
+
+                    <div class="playlist-editor">
+
+                        <div class="playlist-editor-header">
+
+                            <button
+                                class="back-playlist-btn"
+                                type="button"
+                            >
+                                ←
+                            </button>
+
+                            <span class="selected-playlist-name">
+                                Playlist
+                            </span>
+
+                        </div>
+
+
+                        <div class="add-song-section">
+
+                            <input
+                                type="text"
+                                class="add-song-input"
+                                placeholder="Enter song name"
+                                autocomplete="off"
+                            >
+
+                            <button
+                                class="add-song-btn"
+                                type="button"
+                            >
+                                Add
+                            </button>
+
+                        </div>
+
+
+                        <div class="song-suggestions">
+                            Try: Song 1, Song 2...
+                        </div>
+
+
+                        <div class="playlist-songs">
+                            <!-- Generated by JavaScript -->
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                AUTH BUTTONS
+            ========================== -->
+
+            <div class="btns" id="authButtons">
+
+                <div class="signupbtn">
+                    <button id="signupOpenBtn" type="button">Sign up</button>
+                </div>
+
+                <div class="loginbtn">
+                    <button id="loginOpenBtn" type="button">Log in</button>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+            MAIN
+        ========================== -->
+
+        <div class="container">
+
+
+            <!-- =========================
+                LEFT SIDEBAR
+            ========================== -->
+
+            <div class="left">
+
+                Your Library
+
+
+                <div class="list">
+
+                    <div class="song">
+                        <audio src="songs/cinematic-suspense-track-for-games-amp-trailers-225120.mp3"></audio>
+                        Song 1
+                    </div>
+
+                    <div class="song">
+                        <audio src="songs/braam-ambient-dropper-epic-stock-media-1-00-09.mp3"></audio>
+                        Song 2
+                    </div>
+
+                    <div class="song">
+                        <audio src="songs/cinematic-suspense-investigative-mystery-219178.mp3"></audio>
+                        Song 3
+                    </div>
+
+                    <div class="song">
+                        <audio src="songs/cinematic-transition-futuristic-synth-riser-ra-music-1-00-21.mp3"></audio>
+                        Song 4
+                    </div>
+
+                    <div class="song">
+                        <audio src="songs/mixkit-big-cinematic-impact-788.mp3"></audio>
+                        Song 5
+                    </div>
+
+                    <div class="song">
+                        <audio src="songs/mixkit-cinematic-drama-riser-632.wav"></audio>
+                        Song 6
+                    </div>
+
+                    <div class="song">
+                        <audio src="songs/mixkit-cinematic-mysterious-riser-brass-2283.wav"></audio>
+                        Song 7
+                    </div>
+
+                    <div class="song">
+                        <audio src="songs/mixkit-echoes-188.mp3"></audio>
+                        Song 8
+                    </div>
+
+                    <div class="song">
+                        <audio src="songs/mixkit-fright-night-871.mp3"></audio>
+                        Song 9
+                    </div>
+
+                    <div class="song">
+                        <audio src="songs/mixkit-movie-trailer-epic-impact-2908.wav"></audio>
+                        Song 10
+                    </div>
+
+                    <div class="song">
+                        <audio src="songs/mixkit-powerful-air-whooshes-3220.wav"></audio>
+                        Song 11
+                    </div>
+
+                    <div class="song">
+                        <audio src="songs/mixkit-heartbeat-medium-speed-495.wav"></audio>
+                        Song 12
+                    </div>
+
+                </div>
+
+
+                <!-- FOOTER -->
+
+                <div class="footer">
+
+                    <div>
+
+                        <div>
+                            <a href="https://www.spotify.com/in-en/legal/">
+                                Legal
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="https://www.spotify.com/in-en/safetyandprivacy/">
+                                Safety &amp; Privacy Center
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+                                Privacy Policy
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="https://www.spotify.com/in-en/legal/cookies-policy/">
+                                Cookies
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
+                                About Ads
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="https://www.spotify.com/in-en/accessibility/">
+                                Accessibility
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="https://www.spotify.com/legal/cookies-policy/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Cookies
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                RIGHT CONTENT
+            ========================== -->
+
+            <div class="right">
+
+                <div class="content-header">
+                    <div class="content-heading" id="contentHeading">
+                        Trending songs
+                    </div>
+
+                    <button
+                        class="add-home-song-btn"
+                        id="addHomeSongBtn"
+                        type="button"
+                    >
+                        + Add Song
+                    </button>
+                </div>
+
+
+                <div class="holder" id="songHolder">
+
+                    <!-- SONG 1 -->
+
+                    <div class="card">
+
+                        <img src="song posters/1.jpg" alt="Song 1">
+
+                        <div class="play">
+
+                            <audio src="songs/cinematic-suspense-track-for-games-amp-trailers-225120.mp3"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 1
+
+                    </div>
+
+
+                    <!-- SONG 2 -->
+
+                    <div class="card">
+
+                        <img src="song posters/2.jpg" alt="Song 2">
+
+                        <div class="play">
+
+                            <audio src="songs/braam-ambient-dropper-epic-stock-media-1-00-09.mp3"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 2
+
+                    </div>
+
+
+                    <!-- SONG 3 -->
+
+                    <div class="card">
+
+                        <img src="song posters/3.jpg" alt="Song 3">
+
+                        <div class="play">
+
+                            <audio src="songs/cinematic-suspense-investigative-mystery-219178.mp3"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 3
+
+                    </div>
+
+
+                    <!-- SONG 4 -->
+
+                    <div class="card">
+
+                        <img src="song posters/4.jpg" alt="Song 4">
+
+                        <div class="play">
+
+                            <audio src="songs/cinematic-transition-futuristic-synth-riser-ra-music-1-00-21.mp3"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 4
+
+                    </div>
+
+
+                    <!-- SONG 5 -->
+
+                    <div class="card">
+
+                        <img src="song posters/5.jpg" alt="Song 5">
+
+                        <div class="play">
+
+                            <audio src="songs/mixkit-big-cinematic-impact-788.mp3"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 5
+
+                    </div>
+
+
+                    <!-- SONG 6 -->
+
+                    <div class="card">
+
+                        <img src="song posters/6.jpg" alt="Song 6">
+
+                        <div class="play">
+
+                            <audio src="songs/mixkit-cinematic-drama-riser-632.wav"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 6
+
+                    </div>
+
+
+                    <!-- SONG 7 -->
+
+                    <div class="card">
+
+                        <img src="song posters/7.jpg" alt="Song 7">
+
+                        <div class="play">
+
+                            <audio src="songs/mixkit-cinematic-mysterious-riser-brass-2283.wav"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 7
+
+                    </div>
+
+
+                    <!-- SONG 8 -->
+
+                    <div class="card">
+
+                        <img src="song posters/8.jpg" alt="Song 8">
+
+                        <div class="play">
+
+                            <audio src="songs/mixkit-echoes-188.mp3"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 8
+
+                    </div>
+
+
+                    <!-- SONG 9 -->
+
+                    <div class="card">
+
+                        <img src="song posters/9.jpg" alt="Song 9">
+
+                        <div class="play">
+
+                            <audio src="songs/mixkit-fright-night-871.mp3"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 9
+
+                    </div>
+
+
+                    <!-- SONG 10 -->
+
+                    <div class="card">
+
+                        <img src="song posters/10.jpg" alt="Song 10">
+
+                        <div class="play">
+
+                            <audio src="songs/mixkit-movie-trailer-epic-impact-2908.wav"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 10
+
+                    </div>
+
+
+                    <!-- SONG 11 -->
+
+                    <div class="card">
+
+                        <img src="song posters/11.jpg" alt="Song 11">
+
+                        <div class="play">
+
+                            <audio src="songs/mixkit-powerful-air-whooshes-3220.wav"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 11
+
+                    </div>
+
+
+                    <!-- SONG 12 -->
+
+                    <div class="card">
+
+                        <img src="song posters/12.jpg" alt="Song 12">
+
+                        <div class="play">
+
+                            <audio src="songs/mixkit-heartbeat-medium-speed-495.wav"></audio>
+
+                            <img src="play.svg" alt="Play">
+
+                        </div>
+
+                        Song 12
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+            SIGN UP MODAL
+        ========================== -->
+
+        <div class="auth-modal" id="signupModal" aria-hidden="true">
+            <div class="auth-modal-box" role="dialog" aria-modal="true" aria-labelledby="signupModalTitle">
+
+                <div class="auth-modal-header">
+                    <h2 id="signupModalTitle">Create account</h2>
+                    <button class="auth-close-btn" id="closeSignupBtn" type="button" aria-label="Close">×</button>
+                </div>
+
+                <p class="auth-subtitle">Make your own personal music space.</p>
+
+                <form id="signupForm" class="auth-form">
+                    <label for="signupName">Name</label>
+                    <input id="signupName" type="text" placeholder="Your name" autocomplete="name" required>
+
+                    <label for="signupEmail">Email</label>
+                    <input id="signupEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+
+                    <label for="signupPassword">Password</label>
+                    <input id="signupPassword" type="password" placeholder="Create a password" autocomplete="new-password" required>
+
+                    <label for="signupConfirmPassword">Confirm password</label>
+                    <input id="signupConfirmPassword" type="password" placeholder="Repeat your password" autocomplete="new-password" required>
+
+                    <p class="auth-message" id="signupMessage" aria-live="polite"></p>
+
+                    <button class="auth-submit-btn" type="submit">Sign up</button>
+                </form>
+
+                <p class="auth-switch">Already have an account? <button type="button" id="switchToLoginBtn">Log in</button></p>
+
+            </div>
+        </div>
+
+
+        <!-- =========================
+            LOG IN MODAL
+        ========================== -->
+
+        <div class="auth-modal" id="loginModal" aria-hidden="true">
+            <div class="auth-modal-box" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+
+                <div class="auth-modal-header">
+                    <h2 id="loginModalTitle">Welcome back</h2>
+                    <button class="auth-close-btn" id="closeLoginBtn" type="button" aria-label="Close">×</button>
+                </div>
+
+                <p class="auth-subtitle">Log in to your personal music space.</p>
+
+                <form id="loginForm" class="auth-form">
+                    <label for="loginEmail">Email</label>
+                    <input id="loginEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+
+                    <label for="loginPassword">Password</label>
+                    <input id="loginPassword" type="password" placeholder="Your password" autocomplete="current-password" required>
+
+                    <p class="auth-message" id="loginMessage" aria-live="polite"></p>
+
+                    <button class="auth-submit-btn" type="submit">Log in</button>
+                </form>
+
+                <p class="auth-switch">New here? <button type="button" id="switchToSignupBtn">Create an account</button></p>
+
+            </div>
+        </div>
+
+
+        <!-- =========================
+            ADD SONG MODAL
+        ========================== -->
+
+        <div class="add-song-modal" id="addSongModal" aria-hidden="true">
+            <div class="add-song-modal-box" role="dialog" aria-modal="true" aria-labelledby="addSongModalTitle">
+
+                <div class="add-song-modal-header">
+                    <h2 id="addSongModalTitle">Add Song</h2>
+                    <button
+                        class="close-add-song-btn"
+                        id="closeAddSongBtn"
+                        type="button"
+                        aria-label="Close"
+                    >
+                        ×
+                    </button>
+                </div>
+
+                <form id="addSongForm">
+
+                    <label for="newSongName">Song name</label>
+                    <input
+                        id="newSongName"
+                        type="text"
+                        placeholder="Enter song name"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <label for="newSongFile">Add file</label>
+                    <input
+                        id="newSongFile"
+                        type="file"
+                        accept="audio/*"
+                        required
+                    >
+
+                    <label for="newSongBanner">Choose banner</label>
+                    <input
+                        id="newSongBanner"
+                        type="file"
+                        accept="image/*"
+                        required
+                    >
+
+                    <button
+                        class="save-new-song-btn"
+                        type="submit"
+                    >
+                        Add Song
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+
+        <script src="script.js"></script>
+
+    </body>
+
+    </html>
