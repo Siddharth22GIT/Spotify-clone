@@ -244,21 +244,17 @@ header {
    SONG CARD CONTAINER
 ========================= */
 
-/*
-   top: 80px keeps the cards below
-   "Trending songs".
-
-   bottom: 90px leaves room for the
-   player at the bottom.
-*/
-
 .holder {
     width: calc(100% - 20px);
-    height: auto;
+
     position: absolute;
 
-    top: 80px;
+    /* Enough space below Trending songs */
+    top: 105px;
+
+    /* Reserve space for player */
     bottom: 90px;
+
     left: 10px;
 
     padding: 10px 15px 30px;
@@ -288,6 +284,7 @@ header {
     padding: 12px;
     margin: 0;
 
+    border: 2px solid transparent;
     border-radius: 8px;
 
     font-size: 16px;
@@ -299,7 +296,8 @@ header {
 
     transition:
         background-color 0.25s ease,
-        transform 0.25s ease;
+        transform 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .card > img:first-child {
@@ -376,6 +374,39 @@ header {
 
 
 /* =========================
+   SEARCH RESULT HIGHLIGHT
+========================= */
+
+.card.search-highlight {
+    border-color: white;
+
+    animation: searchSongPop 0.45s ease-out;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   SEARCH POP ANIMATION
+========================= */
+
+@keyframes searchSongPop {
+
+    0% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
    MUSIC PLAYER
 ========================= */
 
@@ -418,7 +449,9 @@ header {
 }
 
 
-/* Player upper section */
+/* =========================
+   PLAYER TOP
+========================= */
 
 .player-top {
     width: 100%;
@@ -433,7 +466,9 @@ header {
 }
 
 
-/* Current song */
+/* =========================
+   CURRENT SONG
+========================= */
 
 .player-song-info {
     min-width: 0;
@@ -449,7 +484,9 @@ header {
 }
 
 
-/* Controls */
+/* =========================
+   PLAYER CONTROLS
+========================= */
 
 .controls {
     display: flex;
@@ -506,7 +543,9 @@ header {
 }
 
 
-/* Volume */
+/* =========================
+   VOLUME
+========================= */
 
 .volume-container {
     display: flex;
@@ -527,7 +566,9 @@ header {
 }
 
 
-/* Progress */
+/* =========================
+   PROGRESS BAR
+========================= */
 
 .progress-container {
     display: flex;
@@ -564,11 +605,12 @@ header {
 }
 
 
-/* Range inputs */
+/* =========================
+   RANGE INPUTS
+========================= */
 
 input[type="range"] {
     accent-color: #1db954;
-
     cursor: pointer;
 }
 
@@ -590,7 +632,6 @@ input[type="range"] {
     .container .left {
         width: 230px;
         min-width: 210px;
-
         padding: 16px;
     }
 
@@ -599,7 +640,11 @@ input[type="range"] {
     }
 
     .holder {
+        top: 95px;
+        bottom: 90px;
+
         left: 5px;
+
         width: calc(100% - 10px);
 
         padding: 10px 15px 25px;
@@ -612,7 +657,6 @@ input[type="range"] {
 
     .card {
         padding: 9px;
-
         font-size: 14px;
     }
 
@@ -782,7 +826,7 @@ input[type="range"] {
     /* Cards */
 
     .holder {
-        top: 58px;
+        top: 62px;
 
         bottom: 92px;
 
@@ -950,7 +994,7 @@ input[type="range"] {
 
 
     .holder {
-        top: 53px;
+        top: 58px;
 
         bottom: 92px;
 

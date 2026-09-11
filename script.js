@@ -330,3 +330,65 @@ setInterval(() => {
     });
 
 }, 200);
+
+// ===============================
+// SONG SEARCH
+// ===============================
+
+const searchInput = document.querySelector(".search input");
+const songCards = document.querySelectorAll(".card");
+const songsContainer = document.querySelector(".holder");
+
+searchInput.addEventListener("input", () => {
+
+    const searchValue = searchInput.value.trim().toLowerCase();
+
+    // If search box is empty, remove all highlights
+    if (searchValue === "") {
+        songCards.forEach(card => {
+            card.classList.remove("search-highlight");
+        });
+
+        return;
+    }
+
+    let foundCard = null;
+
+    songCards.forEach(card => {
+
+        const songName = card.textContent
+            .trim()
+            .toLowerCase();
+
+        // Remove old highlight
+        card.classList.remove("search-highlight");
+
+        // Find first matching song
+        if (!foundCard && songName.includes(searchValue)) {
+            foundCard = card;
+        }
+    });
+
+
+    // ===============================
+    // SCROLL TO MATCHING SONG
+    // ===============================
+
+    if (foundCard) {
+
+        // Scroll the song area to the matching card
+        foundCard.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest"
+        });
+
+        // Add pop + white border
+        foundCard.classList.add("search-highlight");
+
+        // Remove highlight after animation
+        setTimeout(() => {
+            foundCard.classList.remove("search-highlight");
+        }, 1200);
+    }
+});
